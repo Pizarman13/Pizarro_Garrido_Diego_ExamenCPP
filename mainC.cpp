@@ -59,6 +59,20 @@ void eliminarMateria(struct Estudiante* estudiante, const char* materiaEliminar)
     }
 }
 
+struct Asistencia {
+    char fecha[50];
+    char materia[50];
+    char estado[50];
+};
+
+void registrarAsistencia(const struct Estudiante* estudiante, const struct Asistencia* asistencia) {
+    printf("Registro de Asistencia:\n");
+    printf("Fecha: %s\n", asistencia->fecha);
+    printf("Materia: %s\n", asistencia->materia);
+    printf("Estado: %s\n", asistencia->estado);
+    printf("Asistencia registrada correctamente.\n");
+};
+
 int main() {
 
     struct Estudiante est1 = {"Juan", 20, 5.5, {"Fisica"}};
@@ -77,6 +91,11 @@ int main() {
     eliminarMateria(&est1, "Mates");
     printf("\nDespues de eliminar Mates:\n");
     mostrarMaterias(&est1);
+
+    struct Asistencia ast1 = {"22/02/2023", "Matematicas", "resente"};
+    registrarAsistencia(est1, ast1);
+
+    return 0;
 }
 
 
