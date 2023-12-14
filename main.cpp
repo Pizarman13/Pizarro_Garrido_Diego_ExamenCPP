@@ -44,6 +44,22 @@ void eliminarMateria(Estudiante& estudiante, const std::string& materiaEliminar)
     }
 }
 
+//estructura asistencia
+struct Asistencia {
+    std::string fecha;
+    std::string materia;
+    std::string estado;
+};
+
+// Registrar asistencia
+void registrarAsistencia(Estudiante& estudiante, const Asistencia& asistencia) {
+    std::cout << "Registro de Asistencia:" << std::endl;
+    std::cout << "Fecha: " << asistencia.fecha << std::endl;
+    std::cout << "Materia: " << asistencia.materia << std::endl;
+    std::cout << "Estado: " << asistencia.estado << std::endl;
+    std::cout << "Asistencia registrada correctamente." << std::endl;
+};
+
 int main() {
 
     struct Estudiante est1 = {"Diego", 19, 7.5, {"Matematicas"}};
@@ -62,6 +78,12 @@ int main() {
     mostrarMaterias(est1);
 
     mostrarEstudiante(est1);
+
+    struct Asistencia ast = {
+            "20/02/2004", "Historia", "Presente"
+    };
+
+    registrarAsistencia(est1, ast);
 
     return 0;
 }
