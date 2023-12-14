@@ -14,6 +14,7 @@ Parte 2:
     3. Comparativa: La diferencia que podemos encontrar al comparar ambos codigos es el uso de diferentes librerias, en el main.cpp usamos la libreria iostream mientras que en el main.C usamos la libreria stdio.h
   
   Gestion de memoria:
-    1.
-    2.
-    3.
+    esta contestado en main.cpp y  en mainC.cpp.
+
+  Registro de asistencia:
+    Esta contestado en el main.cpp y mainC.cpp.
